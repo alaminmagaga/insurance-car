@@ -1,277 +1,197 @@
-<!DOCTYPE html>
-<html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
-<head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  
-  <link rel="stylesheet"  href="{{ url_for('static', filename='w3.css') }}">
- <style type="text/css">
-    
- 
-  </style>
-</head>
 
+ 
+<!DOCTYPE html>
+<html>
+    <head>
+<title>index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"  href="{{ url_for('static', filename='w3.css') }}">
+
+
+</head>
 <body>
 
-<div class='w3-padding w3-teal w3-center'><h1>insurance model</h1></div>
-  
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-padding-24" style="font-size:20px;">
+    <a href="" class="w3-bar-item w3-button" >Home</a>
+    <a href="{{url_for('process')}}" class="w3-bar-item w3-button" >Chat</a>
+    <a href="" class="w3-bar-item w3-button" >Detect</a>
+   
+  </div>
+</div>
+
+<br><br>
+<br><br>
+<div class="w3-center w3-padding-32" style="margin:auto;">
+    
+    <a class="w3-btn w3-card w3-light-grey" style="width: 20%;height:300px;" href=""><br><br><br><br><br><p>Plant Tomatoes</p></a>
+    <a class="w3-btn w3-card w3-light-grey" style="width: 20%;height:300px;" href=""><br><br><br><br><br><p> Disease and Symptoms</p></a>
+    <a class="w3-btn w3-card w3-light-grey" style="width: 20%;height:300px;" href=""><br><br><br><br><br><p>Types of Tomatoes</p></a>
+
+</div>
 
 
+<div class="w3-center w3-padding-32" style="margin:auto;">
+    
+    <a class="w3-btn w3-card w3-light-grey" style="width: 20%;height:300px;" href=""><br><br><br><br><br><p>Tools</p></a>
+    <a class="w3-btn w3-card  w3-light-grey" style="width: 20%;height:300px;" href="#"><br><br><br><br><br>Disease Control</a>
+    <a class="w3-btn w3-card  w3-light-grey" style="width: 20%;height:300px;" href="#"><br><br><br><br><br>Soil type</a>
+
+</div>
+
+		   <br>
+
+
+ 
+</div>
 
 <div class="w3-container">
-  <form class="w3-container w3-card-2" action="{{ url_for('predict')}}" method="POST" style="width: 100%">
-  <h2 class="w3-text-blue w3-center w3-text-teal" >Input Form</h2>
-  <p>      
-  <label class="w3-text-teal"><b>months as customer</b></label>
-  <input id="id1" class="w3-input w3-border" name="months_as_customer"  required="required" type="number"></p>
-  
-  <p>
-  <label class="w3-text-teal"><b>age</b></label>
-  <input id="id1" class="w3-input w3-border" name="age" type="number"  required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>policy state</b></label>
- 
-  <select name="policy_state"   class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="OH">OH</option>
-            <option value="IL">IL</option>
-            <option value="IN">IN</option>
-            </select>
-  <p>
-  <label class="w3-text-teal"><b>policy csl</b></label>
- 
-  <select name="policy_csl"   class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="250/500">250/500</option>
-            <option value="100/300">100/300</option>
-            <option value="500/1000">500/1000</option>
-            </select>
-  <p> 
-  
-       
-  <label class="w3-text-teal"><b>policy deductable</b></label>
-  <input id="id1" class="w3-input w3-border" name="policy_deductable"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>policy annual premium</b></label>
-  <input id="id1" class="w3-input w3-border" name="policy_annual_premium"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>umbrella limit</b></label>
-  <input id="id1" class="w3-input w3-border" name="umbrella_limit"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>insured sex</b></label>
-  <select name="insured_sex"  class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="female">female</option>
-            <option value="male">male</option>
-            </select>
-            </p>
-  <p>      
-  <label class="w3-text-teal"><b>insured education level</b></label>
-  <select name="insured_education_level"  class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="JD">JD</option>
-            <option value="High School">High School</option>
-            <option value="Associate">Associate</option>
-            <option value="MD">MD</option>
-            <option value="PhD">PhD</option>
-            <option value="College">College</option>
-    
-          </select></p>
-  <p>      
-  <label class="w3-text-teal"><b>insured occupation</b></label>
-  <select name="insured_occupation" class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="prof-specialty">prof-specialty</option>
-            <option value="tech-support">tech-support</option>
-            <option value="sales">sales</option>
-            <option value="exec-managerial">exec-managerial</option>
-            <option value="craft-repair">craft-repair</option>
-            <option value="transport-moving">transport-moving</option>
+    <div>
+        
+    </div>
+<br><br>
+<div class="w3-container w3-center w3-font-xxlarger"><h1 style="font-size:50px;"><b>Services</b></h1></div>
+    <br>
+<div class="w3-row">
+
+
+        <div class="w3-third w3-container w3-center">
+            <h1>Chat</h1>
+            <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x "></i>
+                <a href="#"><i class=" fas fa-comments fa-stack-1x fa-inverse text-primary" ></i></a>
+            </span>
+            <h4 class="my-3">Chat</h4>
             
-            <option value="other-service">other-service</option>
-            <option value="priv-house-serv">priv-house-serv</option>
-            <option value="armed-forces">armed-forces</option>
-            <option value="adm-clerical">adm-clerical</option>
-            <option value="protective-serv">protective-serv</option>
-            <option value="handlers-cleaners">handlers-cleaners</option>
-            <option value="farming-fishing">farming-fishing</option>
-
-          </select></p>
-  <p>      
-  <label class="w3-text-teal"><b>insured hobbies</b></label>
-  <select name="insured_hobbies" class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="paintball">paintball</option>
-            <option value="exercise">exercise</option>
-            <option value="movies">movies</option>
-            <option value="golf">golf</option>
-            <option value="camping">camping</option>
-            <option value="kayaking">kayaking</option>
+        </div>
+        <div class="w3-third w3-container w3-center">
+            <h1>Support</h1>
+            <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x "></i>
+                <a href="#"><i class="fas fa-support fa-stack-1x fa-inverse"></i></a>
+            </span>
+            <h4 class="my-3">Support</h4>
+        
+        </div>
+        <div class="w3-third w3-container w3-center">
+            <h1>Meetup</h1>
             
-            <option value="yachting">yachting</option>
-            <option value="hiking">hiking</option>
-            <option value="video-games">video-games</option>
-            <option value="base-jumping">base-jumping</option>
-            <option value="skydiving">skydiving</option>
-            <option value="board-games">board-games</option>
-            <option value="polo">polo</option>
-
-          </select></p>
-  <p>   
-     
-  <label class="w3-text-teal"><b>insured relationship</b></label>
-   <select  name="insured_relationship" class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="own-child">own-child</option>
-            <option value="other-relative">other-relative</option>
-            <option value="not-in-family">not-in-family</option>
-            <option value="husband">husband</option>
-            <option value="wife">wife</option>
-            <option value="unmarried">unmarried</option>
-
-          </select></p>
-  <p>      
-  <label class="w3-text-teal"><b>capital gains</b></label>
-  <input id="id1" class="w3-input w3-border" name="capital-gains"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>capital loss</b></label>
-  <input id="id1" class="w3-input w3-border" name="capital-loss"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>incident type</b></label>
-  
-  <select  name="incident_type" class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="Multi-vehicle Collision">Multi-vehicle Collision</option>
-            <option value="Single Vehicle Collision">Single Vehicle Collision</option>
-            <option value="Vehicle Theft">Vehicle Theft</option>
-            <option value="Parked Car">Parked Car</option>
-
-          </select></p>
-  <p>      
-  <label class="w3-text-teal"><b>collision type</b></label>
-  
-  <select  name="collision_type"  class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="Rear Collision">Rear Collision</option>
-            <option value="Side Collision">Side Collision</option>
-            <option value="Front Collision">Front Collision</option>
-    
-          </select></p>
-  <p>      
-  <label class="w3-text-teal"><b>incident severity</b></label>
-  
-  <select  name="incident_severity" class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="Minor Damage">Minor Damage</option>
-            <option value="Total Loss">Total Loss</option>
-            <option value="Major Damage">Major Damage</option>
-             <option value="Trivial Damage">Trivial Damage</option>
-    
-          </select></p>
-  <p>      
-  <label class="w3-text-teal"><b>incident state</b></label>
- 
-   <select  name="incident_state" class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="NY">NY</option>
-            <option value="WV">WV</option>
-            <option value="NC">NC</option>
-             <option value="VA">VA</option>
-             <option value="PA">PA</option>
-             <option value="OH">OH</option>
-    
-          </select></p>
-  <p>      
-  <label class="w3-text-teal"><b>incident city</b></label>
-   <select  name="incident_city"  class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="Springfield">Springfield</option>
-            <option value="Arlington">Arlington</option>
-            <option value="Columbus">Columbus</option>
-             <option value="Northbend">Northbend</option>
-             <option value="Hillsdale">Hillsdale</option>
-             <option value="Riverwood">Riverwood</option>
-             <option value="Northbrook">Northbrook</option>
-    
-          </select></p>
-  <p>      
-  <label class="w3-text-teal"><b>incident location</b></label>
-  
-   <select  name="incident_location"  class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="1532 Washington St">1532 Washington St</option>
-            <option value="3872 5th Drive">3872 5th Drive</option>
-            <option value="9821 Francis Ave">9821 Francis Ave</option>
-             <option value="others">others</option>
+                
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <a href="#"> <i class="fas fa-handshake fa-stack-1x fa-inverse"></i></a>
+                  </span> 
+           
+           
+            <h4 class="my-3">Appointment</h4>
              
-          </select></p>
-  <p>      
-  <label class="w3-text-teal"><b>incident hour of the day</b></label>
-  <input id="id1" class="w3-input w3-border" name="incident_hour_of_the_day"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>number of vehicles involved</b></label>
-  <input id="id1" class="w3-input w3-border" name="number_of_vehicles_involved"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>property damage</b></label>
-  <select  name="property_damage"  class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="No">No</option>
-            <option value="Yes">Yes</option>
-        
-          </select></p>
-  <p>      
-  <label class="w3-text-teal"><b>bodily injuries</b></label>
-  <input id="id1" class="w3-input w3-border" name="bodily_injuries"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>witnesses</b></label>
-  <input id="id1" class="w3-input w3-border" name="witnesses"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>police report available</b></label>
-  <select  name="police_report_available"  class="w3-select w3-border w3-round-large"  style="width:40%" required="required">
-            <option value="No">No</option>
-            <option value="Yes">Yes</option>
-        
-          </select></p>
-  <p>      
-  <label class="w3-text-teal"><b>total claim amount</b></label>
-  <input id="id1" class="w3-input w3-border" name="total_claim_amount"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>injury claim</b></label>
-  <input id="id1" class="w3-input w3-border" name="injury_claim"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>property claim</b></label>
-  <input id="id1" class="w3-input w3-border" name="property_claim"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>vehicle claim</b></label>
-  <input id="id1" class="w3-input w3-border" name="vehicle_claim"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>auto year</b></label>
-  <input id="id1" class="w3-input w3-border" name="auto_year"  type="number" required="required"></p>
-  
+        </div>
 
-  <p>      
-  <label class="w3-text-teal"><b>policy bind year</b></label>
-  <input id="id1" class="w3-input w3-border" name="policy_bind_year"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>policy bind month</b></label>
-  <input id="id1" class="w3-input w3-border" name="policy_bind_month"  type="number" required="required"></p>
-  
-  <p>      
-  <label class="w3-text-teal"><b>policy bind day</b></label>
-  <input id="id1" class="w3-input w3-border" name="policy_bind_day"  type="number" required="required"></p>
-  
-  
-  
-  
-  
-  
-  
-  
-  <button onclick="myFunction()" type="submit" class="btn btn-primary btn-block btn-large w3-text-teal w3-border-teal" style="width:100%;">Predict</button>
-</form>
-</div>   
+
+    </div>
+ <br><br>
+</div>
+
+</body>
+</html>
+
+
+
+ 
+<!DOCTYPE html>
+<html>
+    <head>
+<title>index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"  href="{{ url_for('static', filename='w3.css') }}">
+
+
+</head>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-padding-24" style="font-size:20px;">
+    <a href="{{url_for('home')}}" class="w3-bar-item w3-button" >Home</a>
+    <a href="{{url_for('process')}}" class="w3-bar-item w3-button" >Chat</a>
+    <a href="" class="w3-bar-item w3-button" >Detect</a>
    
+  </div>
+</div>
+
+<br><br>
+<br><br>
+<div class="w3-center w3-padding-32" style="margin:auto;">
+
+    <a class="w3-btn w3-card w3-light-grey" style="width: 20%;height:300px;" href=""><br><br><br><br><br><p>Plant Tomatoes</p></a>
+    <a class="w3-btn w3-card w3-light-grey" style="width: 20%;height:300px;" href=""><br><br><br><br><br><p> Disease and Symptoms</p></a>
+    <a class="w3-btn w3-card w3-light-grey" style="width: 20%;height:300px;" href=""><br><br><br><br><br><p>Types of Tomatoes</p></a>
+
+</div>
+
+
+<div class="w3-center w3-padding-32" style="margin:auto;">
+    
+    <a class="w3-btn w3-card w3-light-grey" style="width: 20%;height:300px;" href=""><br><br><br><br><br><p>Tools</p></a>
+    <a class="w3-btn w3-card  w3-light-grey" style="width: 20%;height:300px;" href="#"><br><br><br><br><br>Disease Control</a>
+    <a class="w3-btn w3-card  w3-light-grey" style="width: 20%;height:300px;" href="#"><br><br><br><br><br>Soil type</a>
+
+</div>
+
+		   <br>
+
+
+ 
+</div>
+
+<div class="w3-container">
+    <div>
+        
+    </div>
+<br><br>
+<div class="w3-container w3-center w3-font-xxlarger"><h1 style="font-size:50px;"><b>Services</b></h1></div>
+    <br>
+<div class="w3-row">
+
+        <div class="w3-third w3-container w3-center">
+            <h1>Chat</h1>
+            <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x "></i>
+                <a href=""><i class=" fas fa-comments fa-stack-1x fa-inverse text-primary" ></i></a>
+            </span>
+            <h4 class="my-3">Chat</h4>
+            
+            
+        </div>
+        <div class="w3-third w3-container w3-center">
+            <h1>Video</h1>
+            <span class="fa-stack fa-4x">
+                <i class="fas fa-circle fa-stack-2x "></i>
+                <i class="fas fa-video fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="my-3">Video Call</h4>
+           </div> 
+          
+        <div class="w3-third w3-container w3-center">
+            <h1>Chat</h1>
+            
+                
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-handshake fa-stack-1x fa-inverse"></i>
+                  </span> 
+           
+           
+            <h4 class="my-3">Appointment</h4>
+             
+           
+        </div>
+
+
+    </div>
+    
+ 
+ <br><br>
+</div>
+
 </body>
 </html>
