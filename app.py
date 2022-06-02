@@ -10,6 +10,10 @@ model = pickle.load(open('insurance.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
+@app.route('/process')
+def process():
+    return render_template('process.html')
+
 
 
 
@@ -21,13 +25,7 @@ def predict():
     age=request.form['age']
     age=int(age)
     
-    ps=request.form['policy_state']
-    if ps =="OH":
-        ps= 0
-    elif ps == "IL":
-        ps = 1
-    elif ps == "IN":
-        ps = 2
+    
         
     pcl=request.form['policy_csl']
     if pcl =="250/500":
@@ -98,46 +96,7 @@ def predict():
     elif io == "farming-fishing":
         io = 13
      
-    ih=request.form['insured_hobbies']
-    if ih =="reading":
-        ih= 0
-    elif ih == "paintball":
-        ih = 1
-    elif ih == "exercise":
-        ih = 2
-    elif ih == "movies":
-        ih = 3
-    elif ih == "golf":
-        ih = 4
-    elif ih == "camping":
-        ih = 5
-    elif ih == "kayaking":
-        ih = 6
-    elif ih == "yachting":
-        ih = 7
-    elif ih == "hiking":
-        ih = 8
-    elif ih == "video-games":
-        ih = 9
-    elif ih == "base-jumping":
-        ih = 10
-    elif ih == "skydiving":
-        ih = 11
-    elif ih == "board-games":
-        ih = 12
-    elif ih == "polo":
-        ih = 13
-    elif ih == "chess":
-        ih = 14
-    elif ih == "dancing":
-        ih = 15
-    elif ih == "sleeping":
-        ih = 16
-    elif ih == "cross-fit":
-        ih = 17
-    elif ih == "basketball":
-        ih = 18
-     
+    
         
     ir=request.form['insured_relationship']
     if ir =="own-child":
@@ -194,46 +153,7 @@ def predict():
     elif ins == "Trivial Damage":
         ins =3
         
-    inc=request.form['incident_state']
-    if inc =="NY":
-        inc = 0
-    elif inc == "WV":
-        inc =1
-    elif inc == "NC":
-        inc =2
-    elif inc == "VA":
-        inc =3
-    elif inc == "PA":
-        inc =4
-    elif inc == "OH ":
-        inc =5
-        
-    ic=request.form['incident_city']
-    if ic =="Springfield":
-        ic = 0
-    elif ic == "Arlington":
-        ic =1
-    elif ic == "Columbus":
-        ic =2
-    elif ic == "Northbend":
-        ic =3
-    elif ic == "Hillsdale":
-        ic =4
-    elif ic == "Riverwood":
-        ic =5
-    elif ic == "Northbrook":
-        ic =6
-        
-    inl=request.form['incident_location']
-    if inl =="1532 Washington St":
-        inl = 0
-    elif inl == "3872 5th Drive":
-        inl =1
-    elif inl == "9821 Francis Ave":
-        inl =2
-    elif inl == "others":
-        inl =3
-        
+    
     iod=request.form['incident_hour_of_the_day']
     iod=int(iod)
     
@@ -247,7 +167,10 @@ def predict():
         prd =1
 
     bi=request.form['bodily_injuries']
-    bi=int(bi)
+    if bi=="No":
+        bi=0
+    elif bi=="Yes":
+        bi=1
   
     wt=request.form['witnesses']
     wt=int(wt)
@@ -289,7 +212,7 @@ def predict():
     
     
    
-    int_features = [mac,age,ps,pcl,pd,pap,ul,iss,iel,io,ih,ir,cg,cl,it,ct,ins,inc,ic,inl,iod,nvi,prd,bi,wt,pra,tca,ic,pc,vc,ay,pby,pbm,pbd]
+    int_features = [mac,age,pcl,pd,pap,ul,iss,iel,io,ir,cg,cl,it,ct,ins,iod,nvi,prd,bi,wt,pra,tca,ic,pc,vc,ay,pby,pbm,pbd]
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
 
