@@ -29,6 +29,14 @@ def typet():
 @app.route('/tools')
 def tools():
     return render_template('tools.html')
+@app.route('/harvest')
+def harvest():
+    return render_template('harvest.html')
+
+@app.route('/market')
+def market():
+    return render_template('market.html')
+
 
 
 
