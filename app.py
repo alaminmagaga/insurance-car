@@ -37,6 +37,11 @@ def harvest():
 def market():
     return render_template('market.html')
 
+@app.route('/processing')
+def processing():
+    return render_template('processing.html')
+
+
 
 
 
