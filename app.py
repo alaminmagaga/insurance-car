@@ -14,6 +14,10 @@ def home():
 def process():
     return render_template('process.html')
 
+@app.route('/plant')
+def plant():
+    return render_template('plant.html')
+
 
 
 
