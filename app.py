@@ -18,6 +18,18 @@ def process():
 def plant():
     return render_template('plant.html')
 
+@app.route('/disease')
+def disease():
+    return render_template('disease.html')
+
+@app.route('/typet')
+def typet():
+    return render_template('typet.html')
+
+@app.route('/tools')
+def tools():
+    return render_template('tools.html')
+
 
 
 
