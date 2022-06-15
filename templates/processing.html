@@ -1,107 +1,72 @@
-
- 
 <!DOCTYPE html>
-<html>
-    <head>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  
+  <link rel="stylesheet"  href="{{ url_for('static', filename='w3.css') }}">
+ <style type="text/css">
+    
+ 
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<
-<link rel="stylesheet"  href="{{ url_for('static', filename='w3.css') }}">
-
-
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </style>
 </head>
+
 <body>
 
-
+<div class="w3-top">
   <div class="w3-bar w3-black w3-padding-24" style="font-size:20px;">
-    <a href="" class="w3-bar-item w3-button" >Home</a>
+    <a href="{{url_for('home')}}" class="w3-bar-item w3-button" >IYLM-TECH</a>
     <a href="" class="w3-bar-item w3-button" >Chat</a>
-    <a href="" class="w3-bar-item w3-button" >Detect</a>
+    <a href="{{url_for('process')}}" class="w3-bar-item w3-button" >Device</a>
    
-
-    
   </div>
-
-
-<br><br><br><br><br><br><br><br>
-
-<div class="w3-container" style="margin: auto;">
-
-
-
-
-
- <div class="w3-container"> 
-     
-     
-     
- 
- 
-  
-            <div class="w3-container w3-center" >
-                <h2 class="">Upload Your Images</h2>
-        
-                <form  enctype="multipart/form-data">
-            <input class="w3-border w3-round w3-light-teal w3-padding" type="file" name="file" class="btn" required="required" style="width: 50%"><br><br>
-            <input class="w3-padding w3-dark-grey w3-text-white w3-round" type="submit" class="btn" >
-        </form>
-            </div>
+</div>
+<br><br>
+<br><br>
+<b></br>
+<div class="w3-center">
+<br><p><h1>Smart Farm:</b>offline</h1>
+</div>
+<div class="w3-row">
+  <div class="w3-half w3-container">
     
-          
- </div>
-    
+    <div class="w3-row">
+      
+      <div class="w3-half w3-container w3-card w3-light-grey">
+       <p>No of Predator Spotted=21</p>
+       <p>No of tutal Absoluta Spotted=17</p>
+       <p>No of other pest spotted=4</p>
 
+      </div>
+    </div>
+  </div>
+  <div class="w3-half w3-container">
 
-   
- 
+    <div class="w3-row">
+      
+      <div class="w3-half w3-container w3-card w3-light-grey " style="float:right;">
+        <p>No of Target Neutralize = 15</p>
+        <p>No of Target Missed= 2</p>
+        <p>Device Performance= 89%</p>
+       <a href="#"> <p>View all processed images</p></a>
+      </div>
+    </div>
+  </div>
 </div>
 
-<br><br><br>
 
-<div class="w3-row">
-
-        <div class="w3-third w3-container w3-center">
-            <h1>Chat</h1>
-            <span class="fa-stack fa-4x">
-                <i class="fas fa-circle fa-stack-2x "></i>
-                <a href=""><i class=" fas fa-comments fa-stack-1x fa-inverse text-primary" ></i></a>
-            </span>
-            <h4 class="my-3">Support</h4>
-            
-            
-        </div>
-        <div class="w3-third w3-container w3-center">
-            <h1>Video</h1>
-            <span class="fa-stack fa-4x">
-                <i class="fas fa-circle fa-stack-2x "></i>
-                <i class="fas fa-comment fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="my-3">support</h4>
-           </div> 
-          
-        <div class="w3-third w3-container w3-center">
-            <h1>Meetup</h1>
-            
-                
-                <span class="fa-stack fa-4x">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-handshake fa-stack-1x fa-inverse"></i>
-                  </span> 
-           
-           
-            <h4 class="my-3">Appointment</h4>
-             
-           
-        </div>
+<br><br>
+<div class="w3-container  w3-center">
+<img class="w3-card" src="https://bioprotectionportal.com/wp-content/uploads/2021/11/1-768x456.jpg" style="width:50%;"/>
+</div>
+<br></br>
+<div class="w3-center">
+<button class="w3-btn w3-black">Activate Device</button>
 
 
-    </div>
-    
- 
-  
-    </a>
+</div>
+<br>
 </body>
 </html>
